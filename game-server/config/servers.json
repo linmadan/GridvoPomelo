@@ -1,0 +1,70 @@
+{
+  "development": {
+    "stationConGate": [
+      {
+        "id": "stationConGate",
+        "host": "127.0.0.1",
+        "clientPort": 3010,
+        "frontend": true
+      }
+    ],
+    "stationConnector": [
+      {
+        "id": "stationConnector_1",
+        "host": "127.0.0.1",
+        "port": 3150,
+        "clientHost": "127.0.0.1",
+        "clientPort": 3011,
+        "frontend": true
+      }
+    ],
+    "dataDispatch": [
+      {
+        "id": "dataDispatch_all",
+        "host": "127.0.0.1",
+        "port": 4010
+      }
+    ],
+    "dataRTMaster": [
+      {
+        "id": "dataRTMaster_all",
+        "host": "127.0.0.1",
+        "port": 4020
+      }
+    ]
+  },
+  "production": {
+    "stationConGate": [
+      {
+        "id": "stationConGate",
+        "host": "127.0.0.1",
+        "clientPort": 3010,
+        "frontend": true
+      }
+    ],
+    "stationConnector": [
+      {
+        "id": "stationConnector_1",
+        "host": "127.0.0.1",
+        "port": 3150,
+        "clientHost": "127.0.0.1",
+        "clientPort": 3011,
+        "frontend": true
+      }
+    ],
+    "dataDispatch": [
+      {
+        "id": "dataDispatch_all",
+        "host": "127.0.0.1",
+        "port": 4010
+      }
+    ],
+    "dataRTMaster": [
+      {
+        "id": "dataRTMaster_all",
+        "host": "127.0.0.1",
+        "port": 4020
+      }
+    ]
+  }
+}

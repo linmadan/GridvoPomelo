@@ -1,0 +1,18 @@
+[
+  {
+    "type": "stationConGate",
+    "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+  },
+  {
+    "type": "stationConnector",
+    "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+  },
+  {
+    "type": "dataDispatch",
+    "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+  },
+  {
+    "type": "dataRTMaster",
+    "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+  }
+]

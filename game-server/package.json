@@ -1,0 +1,10 @@
+{
+  "name": "gridvo-pomelo",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "mqtt": "^1.10.0",
+    "pomelo": "1.2.3",
+    "underscore": "^1.8.3"
+  }
+}

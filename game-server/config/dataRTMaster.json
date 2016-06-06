@@ -1,0 +1,18 @@
+{
+  "development": {
+    "dataRTMaster_all": {
+      "stationNames": [
+        "NWHEJZ",
+        "NWHYJZ"
+      ]
+    }
+  },
+  "production": {
+    "dataRTMaster_all": {
+      "stationNames": [
+        "NWHEJZ",
+        "NWHYJZ"
+      ]
+    }
+  }
+}

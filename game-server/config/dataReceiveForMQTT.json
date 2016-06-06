@@ -1,0 +1,28 @@
+{
+  "development": {
+    "dataDispatch_all": {
+      "mqttBrokerUrl": "mqtt://10.0.3.21:61613",
+      "mqttOptions": {
+        "username": "gridvo",
+        "password": "gridvo"
+      },
+      "stationNames": [
+        "NWHEJZ",
+        "NWHYJZ"
+      ]
+    }
+  },
+  "production": {
+    "dataDispatch_all": {
+      "mqttBrokerUrl": "mqtt://10.0.3.21:61613",
+      "mqttOptions": {
+        "username": "gridvo",
+        "password": "gridvo"
+      },
+      "stationNames": [
+        "NWHEJZ",
+        "NWHYJZ"
+      ]
+    }
+  }
+}
