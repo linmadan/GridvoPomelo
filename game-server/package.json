@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": false,
   "dependencies": {
+    "async": "^2.0.0-rc.5",
     "mqtt": "^1.10.0",
     "pomelo": "1.2.3",
     "underscore": "^1.8.3"

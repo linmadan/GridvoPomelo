@@ -18,6 +18,20 @@
         "frontend": true
       }
     ],
+    "stationEmployeeAccount": [
+      {
+        "id": "stationEmployeeAccount",
+        "host": "127.0.0.1",
+        "port": 4030
+      }
+    ],
+    "stationManage": [
+      {
+        "id": "stationManage",
+        "host": "127.0.0.1",
+        "port": 4040
+      }
+    ],
     "dataDispatch": [
       {
         "id": "dataDispatch_all",
@@ -50,6 +64,20 @@
         "clientHost": "127.0.0.1",
         "clientPort": 3011,
         "frontend": true
+      }
+    ],
+    "stationEmployeeAccount": [
+      {
+        "id": "stationEmployeeAccount",
+        "host": "127.0.0.1",
+        "port": 4030
+      }
+    ],
+    "stationManage": [
+      {
+        "id": "stationManage",
+        "host": "127.0.0.1",
+        "port": 4040
       }
     ],
     "dataDispatch": [

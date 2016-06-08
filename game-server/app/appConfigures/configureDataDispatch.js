@@ -7,8 +7,12 @@ var configure = function (app) {
     var dataDispatch = gdc.createDataDispatch();
     dataDispatch.on(appEvent.application.DATA_POINT_SAVE_SUCCESS, function (eventData) {
         var routeParam = `dataRTMaster_${app.getServerId().split("_")[1]}`;
-        app.rpc.dataRTMaster.dataRTMasterRemote.receiveRTData(routeParam, eventData, function (rpcResult) {
-            if (rpcResult.code == 200) {
+        app.rpc.dataRTMaster.dataRTMasterRemote.receiveRTData(routeParam, eventData, function (err, rpcResult) {
+            if (err) {
+                console.log("data rt master receive data fail");
+                return;
+            }
+            if (rpcResult.isReceived) {
                 console.log(`data rt master had receive data:${JSON.stringify(eventData)}`);
             }
             else {

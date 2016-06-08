@@ -21,6 +21,9 @@ var configure = function (app) {
             console.log("data rt master launch fail");
             return;
         }
+        dataRTMaster.on(appEvent.domain.RTDATAS_PUB, function (eventData) {
+            console.log(`station pub rt data:${JSON.stringify(eventData)}`);
+        });
         app.set('dataRTMaster', dataRTMaster);
         console.log(`data rt master launch station count:${cBData.stationCount},RD count:${cBData.rTDataCount}`);
     });
