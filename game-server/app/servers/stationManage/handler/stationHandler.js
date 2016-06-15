@@ -9,7 +9,7 @@ Handler.prototype.getStationDVConfig = function (msg, session, next) {
         next(null, {code: 500});
         return;
     }
-    if (_.indexOf(session.get("dutyStations", msg.stationName)) == -1) {
+    if (_.indexOf(session.get("dutyStations"), msg.stationName) == -1) {
         next(null, {code: 500});
         return;
     }
@@ -30,7 +30,7 @@ Handler.prototype.setStationDVConfig = function (msg, session, next) {
         next(null, {code: 500});
         return;
     }
-    if (_.indexOf(session.get("dutyStations", msg.stationDVConfig.stationName)) == -1) {
+    if (_.indexOf(session.get("dutyStations"), msg.stationDVConfig.stationName) == -1) {
         next(null, {code: 500});
         return;
     }
@@ -51,7 +51,7 @@ Handler.prototype.getStationRDConfig = function (msg, session, next) {
         next(null, {code: 500});
         return;
     }
-    if (_.indexOf(session.get("dutyStations", msg.stationName)) == -1) {
+    if (_.indexOf(session.get("dutyStations"), msg.stationName) == -1) {
         next(null, {code: 500});
         return;
     }
@@ -72,7 +72,7 @@ Handler.prototype.setStationRDConfig = function (msg, session, next) {
         next(null, {code: 500});
         return;
     }
-    if (_.indexOf(session.get("dutyStations", msg.stationRDConfig.stationName)) == -1) {
+    if (_.indexOf(session.get("dutyStations"), msg.stationRDConfig.stationName) == -1) {
         next(null, {code: 500});
         return;
     }

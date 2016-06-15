@@ -22,7 +22,14 @@ var configure = function (app) {
             return;
         }
         dataRTMaster.on(appEvent.domain.RTDATAS_PUB, function (eventData) {
-            console.log(`station pub rt data:${JSON.stringify(eventData)}`);
+            var channel = app.get('channelService').getChannel(eventData.stationName, true);
+            channel.pushMessage("onPubRTData", eventData, function (err) {
+                if (err) {
+                    console.log("station pub rt data fail");
+                    return;
+                }
+                console.log(`station pub rt data:${JSON.stringify(eventData)}`);
+            });
         });
         app.set('dataRTMaster', dataRTMaster);
         console.log(`data rt master launch station count:${cBData.stationCount},RD count:${cBData.rTDataCount}`);

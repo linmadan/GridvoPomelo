@@ -9,7 +9,7 @@ Handler.prototype.startRTDataMonitor = function (msg, session, next) {
         next(null, {code: 500});
         return;
     }
-    if (_.indexOf(session.get("dutyStations", msg.stationName)) == -1) {
+    if (_.indexOf(session.get("dutyStations"), msg.stationName) == -1) {
         next(null, {code: 500});
         return;
     }
@@ -18,6 +18,15 @@ Handler.prototype.startRTDataMonitor = function (msg, session, next) {
         if (err) {
             next(err, {code: 500});
             return;
+        }
+        for (let dataName of _.keys(cBData.rTdatas)) {
+            var datas = [];
+            for (let data of cBData.rTdatas[dataName].datas) {
+                if (!_.isNull(data)) {
+                    datas.push(data);
+                }
+            }
+            cBData.rTdatas[dataName].datas = datas;
         }
         next(null, {
             code: 200,

@@ -33,8 +33,8 @@ DataReceiveForMQTT.prototype.start = function (cb) {
         for (let stationName of self.stationNames) {
             mqttClient.subscribe(`rd/${stationName}/#`);
         }
+        console.log('data receive for MQTT start');
     });
-    console.log('data receive for MQTT start');
     process.nextTick(cb);
 };
 
