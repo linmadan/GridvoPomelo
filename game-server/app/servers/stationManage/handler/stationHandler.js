@@ -77,10 +77,16 @@ Handler.prototype.setStationRDConfig = function (msg, session, next) {
         return;
     }
     var stationManage = this.app.get("stationManage");
+    var self = this;
     stationManage.setStationRDConfig(msg.stationRDConfig, function (err, isSuccess) {
         if (err) {
             next(err, {code: 500});
             return;
+        }
+        if (isSuccess) {
+            self.app.rpc.dataRTMaster.dataRTMasterRemote.reLaunchStationRDM(session, msg.stationRDConfig.stationName, function () {
+                return;
+            });
         }
         next(null, {
             code: 200,

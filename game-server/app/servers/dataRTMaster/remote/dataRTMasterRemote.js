@@ -13,6 +13,19 @@ Remote.prototype.receiveRTData = function (rTData, callback) {
     callback(err, {isReceived: true});
 };
 
+Remote.prototype.reLaunchStationRDM = function (stationName, callback) {
+    var dataRTMaster = this.app.get('dataRTMaster');
+    dataRTMaster.launchStationRDM(stationName, function (err, cBData) {
+        if (err) {
+            console.log("站点实时监控重启失败");
+            callback(err, {isLaunched: false});
+            return;
+        }
+        callback(null, {isLaunched: cBData.isLaunched});
+        console.log(`${cBData.stationName}站点实时监控重启成功`);
+    });
+};
+
 Remote.prototype.seChangeStationRDM = function (changeData, callback) {
     if (!_.isNull(changeData.previousStation)) {
         var preChannel = this.app.get('channelService').getChannel(changeData.previousStation, true);
