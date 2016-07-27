@@ -6,7 +6,7 @@
   },
   "production": {
     "id": "master-server-1",
-    "host": "pascal.gridvo.com",
+    "host": "10.0.3.22",
     "port": 3005
   }
 }

@@ -51,7 +51,7 @@
     "stationConGate": [
       {
         "id": "stationConGate",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "clientPort": 3010,
         "frontend": true
       }
@@ -59,9 +59,9 @@
     "stationConnector": [
       {
         "id": "stationConnector_1",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "port": 3150,
-        "clientHost": "127.0.0.1",
+        "clientHost": "10.0.3.22",
         "clientPort": 3011,
         "frontend": true
       }
@@ -69,28 +69,28 @@
     "stationEmployeeAccount": [
       {
         "id": "stationEmployeeAccount",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "port": 4030
       }
     ],
     "stationManage": [
       {
         "id": "stationManage",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "port": 4040
       }
     ],
     "dataDispatch": [
       {
         "id": "dataDispatch_all",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "port": 4010
       }
     ],
     "dataRTMaster": [
       {
         "id": "dataRTMaster_all",
-        "host": "127.0.0.1",
+        "host": "10.0.3.22",
         "port": 4020
       }
     ]
